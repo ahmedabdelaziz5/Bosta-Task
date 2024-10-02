@@ -65,7 +65,7 @@
 
 <br><br>
 ## ERD Model
-![Database design](https://drive.google.com/file/d/1suuASpZgS1MWrt20rOboU-PKnJF1JECt/view?usp=sharing)
+![Database design](https://github.com/ahmedabdelaziz5/Bosta-Task/blob/master/ERD.png)
 
 <br><br>
 ## Admin module:
