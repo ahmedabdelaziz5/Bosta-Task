@@ -7,7 +7,7 @@ module.exports = {
 
     loginValid: validator({
         body: joi.object().required().keys({
-            userName: joi.string().min(1).max(30).pattern(userNameRegex).required().messages({
+            userName: joi.string().min(3).max(30).pattern(userNameRegex).required().messages({
                 'any.required': 'userName is a required field',
                 'string.base': 'userName should be a string',
                 'string.empty': 'userName cannot be empty',
@@ -28,7 +28,7 @@ module.exports = {
 
     forgetPasswordValid: validator({
         body: joi.object().required().keys({
-            email: joi.string().email().messages({
+            email: joi.string().email().required().messages({
                 "any.required": "email is a required field",
                 'string.empty': 'email cannot be an empty field',
                 'string.base': 'email should be a type of text',

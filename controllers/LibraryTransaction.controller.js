@@ -23,7 +23,8 @@ exports.borrowBook = asyncHandler(async (req, res) => {
     const transaction = await libraryTransactionRepo.isExist({
         where: {
             book_id: bookId,
-            user_id: userId
+            user_id: userId,
+            returned_at: null
         }
     });
     if (transaction.success) {
@@ -63,7 +64,7 @@ exports.returnBook = asyncHandler(async (req, res) => {
     const bookId = parseInt(req.query.bookId);
     const book = await bookRepo.isExist({ where: { id: bookId } });
     if (!book.success) {
-        return res.status(400).json(createResponse(false, 'Book is not available', 400));
+        return res.status(400).json(createResponse(false, 'Book Not found', 404));
     }
     const transaction = await libraryTransactionRepo.isExist({
         where: {
@@ -104,7 +105,7 @@ exports.getTransactions = asyncHandler(async (req, res) => {
     const overdue = req.query.overdue;
     const today = new Date();
     let queryFilters = [];
-    if (overdue) {
+    if (overdue) { // if the user wanted to get all the overdue transactions
         queryFilters.push({
             due_date: { [Op.lte]: today },
             returned_at: { [Op.is]: null }

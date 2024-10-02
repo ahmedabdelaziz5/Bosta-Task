@@ -61,7 +61,7 @@ exports.updateUser = async (filter, data) => {
     try {
         const result = await User.update(data, filter);
         if (!result[0]) {
-            return createResponse(false, "Admin not found !", 404);
+            return createResponse(false, "User not found !", 404);
         }
         return createResponse(true, "success", 200, null);
     }
@@ -76,7 +76,7 @@ exports.deleteUser = async (filter) => {
         if (!result) {
             return createResponse(false, "User not found !", 404);
         }
-        return createResponse(true, "User successfully deleted", 200);
+        return createResponse(true, "User successfully deleted", 204);
     }
     catch (error) {
         return createResponse(false, "Internal Server Error", 500, error.message);

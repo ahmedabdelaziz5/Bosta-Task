@@ -19,6 +19,7 @@ module.exports = sequelize.define('Book', {
   ISBN: {
     type: DataTypes.STRING,
     allowNull: false,
+    unique: true,
     validate: {
       notEmpty: true,
       len: [10, 13]

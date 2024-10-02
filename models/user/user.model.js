@@ -47,11 +47,11 @@ module.exports = sequelize.define('User', {
     defaultValue: 'user',
   },
   createdAt: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.DATE,
   },
   updatedAt: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.DATE,
   },
   deletedAt: {

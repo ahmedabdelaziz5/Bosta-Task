@@ -13,7 +13,7 @@ exports.login = asyncHandler(async (req, res) => {
     );
     if (!admin.success) return res.status(admin.statusCode).json(admin);
     const passwordMatch = await comparePassword(password, admin.data.password);
-    if (!passwordMatch) return res.status(409).json(createResponse(false, "Invalid password !", 409));
+    if (!passwordMatch) return res.status(409).json(createResponse(false, "Invalid password !", 401));
     const token = generateToken({
         id: admin.data.id,
         email: admin.data.email,

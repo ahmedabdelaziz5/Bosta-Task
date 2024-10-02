@@ -10,12 +10,15 @@ module.exports = sequelize.define('LibraryTransaction', {
         type: DataTypes.INTEGER
     },
     user_id: {
+        allowNull: false,
         type: DataTypes.INTEGER,
     },
     book_id: {
+        allowNull: false,
         type: DataTypes.INTEGER
     },
     borrowed_at: {
+        allowNull: false,
         type: DataTypes.DATE
     },
     returned_at: {
@@ -23,9 +26,7 @@ module.exports = sequelize.define('LibraryTransaction', {
         defaultValue: null
     },
     due_date: {
-        type: DataTypes.DATE
-    },
-    deleted_at: {
+        allowNull: false,
         type: DataTypes.DATE
     },
     createdAt: {

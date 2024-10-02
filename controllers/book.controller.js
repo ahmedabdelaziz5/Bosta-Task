@@ -3,7 +3,7 @@ const { Op } = require('sequelize');
 const { asyncHandler } = require('../utils/asyncHandler');
 
 exports.getBooks = asyncHandler(async (req, res) => {
-    const { title, author, ISBN } = req.body;
+    const { title, author, ISBN } = req.query;
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     let queryFilters = [];

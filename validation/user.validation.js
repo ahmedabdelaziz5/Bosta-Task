@@ -55,8 +55,8 @@ module.exports = {
         body: joi.object().required().keys({
             userId: joi.number().required().messages({
                 'any.required': 'userId is a required field',
-                'string.empty': 'userId cannot be an empty field',
-                'string.base': 'userId should be a type of text',
+                'number.base': 'userId should be a number',
+                'number.empty': 'userId cannot be empty',
             }),
             password: joi.string().min(8).max(32).pattern(passwordRegex).required().messages({
                 'any.required': 'password is a required field',
@@ -76,14 +76,12 @@ module.exports = {
                 'string.base': 'userId should be a type of text',
             }),
             name: joi.string().min(3).max(30).messages({
-                'any.required': 'name is a required field',
                 'string.empty': 'name cannot be an empty field',
                 'string.base': 'name should be a type of text',
                 'string.min': 'name should be at least 3 characters long',
                 'string.max': 'name should be less than or equal to 30 characters',
             }),
             userName: joi.string().min(3).max(30).pattern(userNameRegex).messages({
-                'any.required': 'userName is a required field',
                 'string.empty': 'userName cannot be an empty field',
                 'string.base': 'userName should be a type of text',
                 'string.min': 'userName should be at least 3 characters long',
@@ -91,13 +89,11 @@ module.exports = {
                 'string.pattern.base': 'userName should contain only alphabets, numbers, hyphen, and underscore'
             }),
             email: joi.string().email().messages({
-                'any.required': 'email is a required field',
                 'string.empty': 'email cannot be an empty field',
                 'string.base': 'email should be a type of text',
                 'string.email': 'email should be a valid email'
             }),
             password: joi.string().min(8).max(32).pattern(passwordRegex).messages({
-                'any.required': 'password is a required field',
                 'string.empty': 'password cannot be an empty field',
                 'string.base': 'password should be a type of text',
                 'string.min': 'Password should be at least 8 characters long',

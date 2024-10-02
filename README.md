@@ -109,13 +109,9 @@
     defaultValue: 'admin',
   },
   createdAt: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.DATE,
   },
-  updatedAt: {
-    allowNull: true,
-    type: DataTypes.DATE,
-  }
 }
 
 ```
@@ -180,11 +176,11 @@ id: {
     defaultValue: 'user',
   },
   createdAt: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.DATE,
   },
   updatedAt: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.DATE,
   },
   deletedAt: {
@@ -338,7 +334,7 @@ id: {
 |/api/library/currentBooks|GET|Retrieve a list of all currently borrowed books.
 |/api/library/transactions|GET|Retrieve a list of all borrowing or overdue transactions.
 |/api/library/borrowTransactionsReport|GET|Generate a CSV report of all borrowing transactions within a specified period.
-|/api/library/currentBooks|GET|Generate a CSV report of all overdue books for the past month.
+|/api/library/overdueTransactionsReport|GET|Generate a CSV report of all overdue books for the past month.
 |/api/library/borrow|POST|Initiate a borrowing operation.
 |/api/library/return|POST|Initiate a book return operation. 
 
@@ -347,5 +343,25 @@ id: {
 - You can run the project using two options:
   - Run the project using the *Docker* image with the following command: `docker-compose up`
   - Run the project using the following command: `npm start`
+
+- Database Migration and Seeding
+  - This project uses Sequelize for database management, including migrations and seeding.
+  -  Below are the commands used to create and manage migrations and seeds:
+      - To create a new migration, use the following command:
+        ```bash 
+          npx sequelize-cli migration:generate --name <migration_name>
+        ```
+      - To apply all pending migrations to the database, run:
+        ```bash 
+          npx sequelize-cli db:migrate 
+        ```
+      - To create seed migration to seed your admin, run:
+        ```bash 
+          npx sequelize-cli seed:generate --name seed_name
+        ```
+      - To run all the seed files, use the following command:
+        ```bash 
+          npx sequelize-cli db:seed:all
+        ```
 
 - all get requests has a pagination you can send page (default = 1) and limit (default = 10) in the URL (query params).

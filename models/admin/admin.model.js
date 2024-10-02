@@ -1,5 +1,4 @@
 'use strict';
-const { Sequelize, DataTypes } = require('sequelize');
 const { sequelize } = require('../../config/database');
 
 module.exports = sequelize.define('Admin', {
@@ -40,13 +39,9 @@ module.exports = sequelize.define('Admin', {
     defaultValue: 'admin',
   },
   createdAt: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.DATE,
   },
-  updatedAt: {
-    allowNull: true,
-    type: DataTypes.DATE,
-  }
 }, {
   freezeTableName: true,
   tableName: 'admins',

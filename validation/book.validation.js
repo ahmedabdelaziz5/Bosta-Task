@@ -3,23 +3,30 @@ const { validator } = require('../middlewares/validation');
 
 module.exports = {
     getBooksValid: validator({
-        body: joi.object().required().keys({
+        query: joi.object().keys({
+            page: joi.number().min(1).messages({
+                'number.base': 'page should be a number',
+                'number.empty': 'page cannot be empty',
+                'number.min': 'page should be at least 1',
+            }),
+            limit: joi.number().min(1).messages({
+                'number.base': 'limit should be a number',
+                'number.empty': 'limit cannot be empty',
+                'number.min': 'limit should be at least 1',
+            }),
             title: joi.string().min(1).max(30).messages({
-                "any.required": "title is a required field",
                 'string.base': 'title should be a string',
                 'string.empty': 'title cannot be empty',
                 'string.min': 'title should be at least 3 characters long',
                 'string.max': 'title should be less than or equal to 30 characters',
             }),
             author: joi.string().min(1).max(30).messages({
-                "any.required": "author is a required field",
                 'string.base': 'author should be a string',
                 'string.empty': 'author cannot be empty',
                 'string.min': 'author should be at least 3 characters long',
                 'string.max': 'author should be less than or equal to 30 characters',
             }),
             ISBN: joi.string().min(10).max(13).messages({
-                "any.required": "ISBN is a required field",
                 'string.base': 'ISBN should be a string',
                 'string.empty': 'ISBN cannot be empty',
                 'string.min': 'ISBN should be at least 13 characters long',
@@ -29,6 +36,7 @@ module.exports = {
             'object.missing': 'At least one of title, author, or ISBN is required',
         }),
     }),
+
     addBookValid: validator({
         body: joi.object().required().keys({
             title: joi.string().min(1).max(30).required().messages({
@@ -71,8 +79,8 @@ module.exports = {
         body: joi.object().required().keys({
             bookId: joi.number().min(1).required().messages({
                 "any.required": "bookId is a required field",
-                'string.base': 'bookId should be a string',
-                'string.empty': 'bookId cannot be empty',
+                'number.base': 'page should be a number',
+                'number.empty': 'page cannot be empty',
             }),
             title: joi.string().min(3).max(30).messages({
                 'string.base': 'title should be a string',
@@ -100,8 +108,7 @@ module.exports = {
             shelfLocation: joi.string().min(1).messages({
                 'string.base': 'shelfLocation should be a string',
                 'string.empty': 'shelfLocation cannot be empty',
-                'string.min': 'shelfLocation should be at least 3 characters long',
-                'string.max': 'shelfLocation should be less than or equal to 30 characters',
+                'string.min': 'shelfLocation should be at least 1 character long',
             }),
         })
     }),
@@ -109,8 +116,8 @@ module.exports = {
         body: joi.object().required().keys({
             bookId: joi.number().min(1).required().messages({
                 "any.required": "bookId is a required field",
-                'string.base': 'bookId should be a number',
-                'string.empty': 'bookId cannot be empty',
+                'number.base': 'bookId should be a number',
+                'number.empty': 'bookId cannot be empty',
             }),
         }),
     }),

@@ -21,7 +21,7 @@ exports.login = asyncHandler(async (req, res) => {
     );
     if (!user.success) return res.status(user.statusCode).json(user);
     const passwordMatch = await comparePassword(password, user.data.password);
-    if (!passwordMatch) return res.status(409).json(createResponse(false, "Invalid credentials", 409));
+    if (!passwordMatch) return res.status(409).json(createResponse(false, "Invalid credentials", 401));
     const payload = {
         id: user.data.id,
         email: user.data.email,
