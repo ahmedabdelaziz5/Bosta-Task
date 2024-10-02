@@ -1,0 +1,3838 @@
+{
+	"info": {
+		"_postman_id": "80d07e97-23e2-42a2-b663-1820388d95d9",
+		"name": "Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38680766",
+		"_collection_link": "https://bold-water-56475.postman.co/workspace/Team-Workspace~e4be1dec-5789-40b9-8a74-0f4a9314d942/collection/38680766-80d07e97-23e2-42a2-b663-1820388d95d9?action=share&source=collection_link&creator=38680766"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 10,\r\n    \"password\": \"User@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\": 6,\r\n    \"password\": \"User@213\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/user/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1027"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"403-olvNsADIi0JsEa8Bdy9CbpYNQ1Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:10:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJhaG1lQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzI3NzczODQzLCJleHAiOjE3Mjc4NjAyNDN9.YO4psj1CJeXdp-nKvyHgThHw74pM_ERIqrAqLEBQwRU\",\n        \"dataValues\": {\n            \"id\": 6,\n            \"name\": \"ahmed\",\n            \"userName\": \"asdasd\",\n            \"email\": \"ahme@gmail.com\",\n            \"password\": \"$2b$10$cDvarLXAhJUQgI6ir1HSauGXoGHeSWSluK5abGgY50QCRgGZPcCe6\",\n            \"role\": \"user\",\n            \"createdAt\": \"2024-10-01T08:40:00.812Z\",\n            \"updatedAt\": \"2024-10-01T08:40:00.812Z\",\n            \"deletedAt\": null\n        },\n        \"_previousDataValues\": {\n            \"id\": 6,\n            \"name\": \"ahmed\",\n            \"userName\": \"asdasd\",\n            \"email\": \"ahme@gmail.com\",\n            \"password\": \"$2b$10$cDvarLXAhJUQgI6ir1HSauGXoGHeSWSluK5abGgY50QCRgGZPcCe6\",\n            \"role\": \"user\",\n            \"createdAt\": \"2024-10-01T08:40:00.812Z\",\n            \"updatedAt\": \"2024-10-01T08:40:00.812Z\",\n            \"deletedAt\": null\n        },\n        \"uniqno\": 1,\n        \"_changed\": {},\n        \"_options\": {\n            \"isNewRecord\": false,\n            \"_schema\": null,\n            \"_schemaDelimiter\": \"\",\n            \"raw\": true,\n            \"attributes\": [\n                \"id\",\n                \"name\",\n                \"userName\",\n                \"email\",\n                \"password\",\n                \"role\",\n                \"createdAt\",\n                \"updatedAt\",\n                \"deletedAt\"\n            ]\n        },\n        \"isNewRecord\": false\n    }\n}"
+								},
+								{
+									"name": "User not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\": 6,\r\n    \"password\": \"User@213\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/user/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "61"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3d-sJgGwBxeTJAfgCdbOYcdnmQzgRg\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:15:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"User not found\"\n}"
+								},
+								{
+									"name": "Wrong password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\": 8,\r\n    \"password\": \"User@213\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/user/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"42-GvtU7FnYCwlNKz9Z/8/egx4aZ3k\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:17:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 409,\n    \"message\": \"Invalid credentials\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "getBooks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{USER_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"title\"\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/book/?page=1&limit=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"book",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"title\"\r\n}   ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/?page=1&limit=10",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "359"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"167-TwJ8lgvWJlO9U3b1n/8R7chlUjg\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 12:13:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"title\": \"title\",\n            \"ISBN\": \"aaaaaaaaaaaaa\",\n            \"author\": \"author\",\n            \"quantity\": 1,\n            \"availableQuantity\": null,\n            \"shelfLocation\": \"a1\",\n            \"createdAt\": \"2024-10-01T11:24:13.588Z\",\n            \"updatedAt\": \"2024-10-01T11:24:13.588Z\",\n            \"deletedAt\": null\n        }\n    ],\n    \"pagination\": {\n        \"totalRecords\": 1,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"pageSize\": 10\n    }\n}"
+								},
+								{
+									"name": "No books matches the filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"asdasddasda\"\r\n}   ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/?page=1&limit=10",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "84"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"54-RZ4XL2RvFCnKFEcyHCZKP1tRbKk\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 12:15:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No books with this filter was found !\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Library",
+					"item": [
+						{
+							"name": "getMyCurrentBooks",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{USER_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/library/currentBooks",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"library",
+										"currentBooks"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/currentBooks",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"currentBooks"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "406"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"196-7UFWh4WZrHMrfmgEZNJ00mEpc/U\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 16:40:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"transactions\": [\n            {\n                \"id\": 2,\n                \"user_id\": 10,\n                \"book_id\": 5,\n                \"borrowed_at\": \"2024-10-01T16:11:15.513Z\",\n                \"returned_at\": null,\n                \"due_date\": \"2024-10-08T16:11:15.513Z\",\n                \"deleted_at\": null,\n                \"createdAt\": \"2024-10-01T16:11:15.516Z\",\n                \"updatedAt\": \"2024-10-01T16:11:15.516Z\",\n                \"deletedAt\": null\n            }\n        ],\n        \"pagination\": {\n            \"totalTransactions\": 1,\n            \"totalPages\": 1,\n            \"currentPage\": 1,\n            \"pageSize\": 10\n        }\n    }\n}"
+								},
+								{
+									"name": "No transactions yet",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/currentBooks",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"currentBooks"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 16:41:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No transactions yet!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "borrow",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{USER_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/library/borrow?bookId=4",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"library",
+										"borrow"
+									],
+									"query": [
+										{
+											"key": "bookId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/borrow?bookId=5",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"borrow"
+											],
+											"query": [
+												{
+													"key": "bookId",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "72"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"48-QtDtmOZDp+agQo4+9DvGyb9UeYM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 15:54:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": \"Book borrowed successfully\",\n    \"message\": 200\n}"
+								},
+								{
+									"name": "Book is not available",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/borrow?bookId=",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"borrow"
+											],
+											"query": [
+												{
+													"key": "bookId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"44-U1smeBjelb92mMxggyAz2dD4ssM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 16:12:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 400,\n    \"message\": \"Book is not available\"\n}"
+								},
+								{
+									"name": "Already borrowed this book",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/borrow?bookId=5",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"borrow"
+											],
+											"query": [
+												{
+													"key": "bookId",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "82"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"52-3Qj3XCqD/NFSUdFJw2v0KDaCU38\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 16:24:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 400,\n    \"message\": \"You have already borrowed this book\"\n}"
+								}
+							]
+						},
+						{
+							"name": "return",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3Mjc4MDUzNTEsImV4cCI6MTcyNzg5MTc1MX0.ST1n4H5L5IovC4fJjuxCIaGtPjrLr091Y4H-wPmd2Xg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/library/return?bookId=5",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"library",
+										"return"
+									],
+									"query": [
+										{
+											"key": "bookId",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/return?bookId=5",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"return"
+											],
+											"query": [
+												{
+													"key": "bookId",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-weIz7jR+uMrDAoUlhQb5X30RuKo\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 18:01:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": \"success\",\n    \"message\": 200\n}"
+								},
+								{
+									"name": "Didn't borrow this book",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/return?bookId=4",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"return"
+											],
+											"query": [
+												{
+													"key": "bookId",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "78"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4e-3xyMSmXAM64Kl4RsYq8vFEG4Yl4\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 17:54:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 400,\n    \"message\": \"You have not borrowed this book\"\n}"
+								},
+								{
+									"name": "Book not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/return?bookId=213",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"return"
+											],
+											"query": [
+												{
+													"key": "bookId",
+													"value": "213"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"44-U1smeBjelb92mMxggyAz2dD4ssM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 18:02:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 400,\n    \"message\": \"Book is not available\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"Admin@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/admin/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"Admin@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/admin/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "421"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1a5-gwXKA5PhscMhu1lDNgDJVCQKkLI\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 05:05:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI3NzU5MTI3LCJleHAiOjE3Mjc4NDU1Mjd9.ByZU5PIKGxSTXyUhkmj6hssmVkVZATXFNt5rza56pvc\",\n        \"id\": 1,\n        \"userName\": \"admin\",\n        \"email\": \"ahmedabdelaziz6018@gmail.com\",\n        \"role\": \"admin\",\n        \"createdAt\": \"2024-10-01T04:48:08.787Z\",\n        \"updatedAt\": \"2024-10-01T04:48:08.787Z\",\n        \"deletedAt\": null\n    }\n}"
+								},
+								{
+									"name": "Invalid password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"Admin@12sa3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/admin/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"login"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "65"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"41-BI6+cm1ika/Z4yYiZKGxCrweFr8\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 05:06:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 409,\n    \"message\": \"Invalid password !\"\n}"
+								},
+								{
+									"name": "Admin not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userName\": \"admiasdn\",\r\n    \"password\": \"Admin@12sa3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/admin/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"login"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "64"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"40-OzUKcJxvGADbsNdmr39fQTl+SlM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 05:07:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"Admin not found !\"\n}"
+								}
+							]
+						},
+						{
+							"name": "forgetPassword",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldPassword\": \"Admin@12345\",\r\n    \"newPassword\": \"Admin@123\",\r\n    \"confirmPassword\": \"Admin@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/admin/forgetPassword",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"forgetPassword"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"oldPassword\": \"Admin@12345\",\r\n    \"newPassword\": \"Admin@123\",\r\n    \"confirmPassword\": \"Admin@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/admin/changePassword",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"changePassword"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-sxctknX5EIviA04R2FcfpywLHq0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 06:27:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "updateProfile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaG1lZGFiZGVsYXppejYwMThAZ21haWwuY29tIiwidXNlck5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzc2MjMxNiwiZXhwIjoxNzI3ODQ4NzE2fQ.SOFC8qA1FSueNrzTnZpzFMzfyUkaO8wFn2KiHe5kUwM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"ahmed21abdelaziz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/admin/updateProfile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"updateProfile"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userName\": \"ahmed21abdelaz\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/admin/updateProfile",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"updateProfile"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "90"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"5a-YIp48uxDzeLpIFgAKNUxxtsjfyM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 06:04:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"userName\": \"ahmed21abdelaz\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaG1lZGFiZGVsYXppejYwMThAZ21haWwuY29tIiwidXNlck5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzc2MjMxNiwiZXhwIjoxNzI3ODQ4NzE2fQ.SOFC8qA1FSueNrzTnZpzFMzfyUkaO8wFn2KiHe5kUwM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldPassword\": \"Admin@12345\",\r\n    \"newPassword\": \"Admin@123\",\r\n    \"confirmPassword\": \"Admin@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/admin/changePassword",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"changePassword"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"oldPassword\": \"Admin@12345\",\r\n    \"newPassword\": \"Admin@123\",\r\n    \"confirmPassword\": \"Admin@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/admin/changePassword",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"changePassword"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-sxctknX5EIviA04R2FcfpywLHq0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 06:27:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\"\n}"
+								},
+								{
+									"name": "Old password is wrong",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"oldPassword\": \"123\",\r\n    \"newPassword\": \"Admin@123\",\r\n    \"confirmPassword\": \"Admin@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/admin/changePassword",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"changePassword"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "65"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"41-9304/f7vdvQ/ckZQ85Ov+NTvsbY\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 06:15:07 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 400,\n    \"message\": \"Invalid password !\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "getUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaG1lZGFiZGVsYXppejYwMThAZ21haWwuY29tIiwidXNlck5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzc2MjMxNiwiZXhwIjoxNzI3ODQ4NzE2fQ.SOFC8qA1FSueNrzTnZpzFMzfyUkaO8wFn2KiHe5kUwM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/?page=1&limit=2",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/user/?page=1&limit=5",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"user",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1240"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4d8-qOak7ji9Yw1OcL07bttbX9OKjhI\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:13:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"users\": [\n            {\n                \"id\": 1,\n                \"name\": null,\n                \"userName\": \"user\",\n                \"email\": \"t@mgail.com\",\n                \"password\": \"admine23e329h@\",\n                \"role\": \"user\",\n                \"createdAt\": \"2024-09-30T12:02:15.331Z\",\n                \"updatedAt\": \"2024-09-30T12:02:15.235Z\",\n                \"deletedAt\": null\n            },\n            {\n                \"id\": 3,\n                \"name\": \"ahmed\",\n                \"userName\": \"asdasd\",\n                \"email\": \"ahmed@gmail.com\",\n                \"password\": \"123\",\n                \"role\": \"user\",\n                \"createdAt\": \"2024-10-01T08:35:34.644Z\",\n                \"updatedAt\": \"2024-10-01T08:35:34.644Z\",\n                \"deletedAt\": null\n            },\n            {\n                \"id\": 4,\n                \"name\": \"ahmed\",\n                \"userName\": \"asdasd\",\n                \"email\": \"ahmed@gmail.com\",\n                \"password\": \"123\",\n                \"role\": \"user\",\n                \"createdAt\": \"2024-10-01T08:36:47.667Z\",\n                \"updatedAt\": \"2024-10-01T08:36:47.667Z\",\n                \"deletedAt\": null\n            },\n            {\n                \"id\": 5,\n                \"name\": \"ahmed\",\n                \"userName\": \"asdasd\",\n                \"email\": \"ahme@gmail.com\",\n                \"password\": \"$2b$10$e1yCtzl/bD2RLINwHvjXCebO5Xe.KLK.AGF9AHjZg2Wkar8cbvw7u\",\n                \"role\": \"user\",\n                \"createdAt\": \"2024-10-01T08:39:35.970Z\",\n                \"updatedAt\": \"2024-10-01T08:39:35.970Z\",\n                \"deletedAt\": null\n            },\n            {\n                \"id\": 6,\n                \"name\": \"ahmed\",\n                \"userName\": \"asdasd\",\n                \"email\": \"ahme@gmail.com\",\n                \"password\": \"$2b$10$cDvarLXAhJUQgI6ir1HSauGXoGHeSWSluK5abGgY50QCRgGZPcCe6\",\n                \"role\": \"user\",\n                \"createdAt\": \"2024-10-01T08:40:00.812Z\",\n                \"updatedAt\": \"2024-10-01T08:40:00.812Z\",\n                \"deletedAt\": null\n            }\n        ],\n        \"pagination\": {\n            \"totalUsers\": 6,\n            \"totalPages\": 2,\n            \"currentPage\": 1,\n            \"pageSize\": 5\n        }\n    }\n}"
+								},
+								{
+									"name": "No users",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/user/?page=1&limit=5",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"user",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-4/yMH1CCojN19doG0JxzBisU+NQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:15:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No users yet!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaG1lZGFiZGVsYXppejYwMThAZ21haWwuY29tIiwidXNlck5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzc2MjMxNiwiZXhwIjoxNzI3ODQ4NzE2fQ.SOFC8qA1FSueNrzTnZpzFMzfyUkaO8wFn2KiHe5kUwM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 9\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/delete",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\": 8\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/user/delete",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "83"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"53-WJWLcfF+SoduLXaSmP/nrC6pXWw\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:54:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"User successfully deleted\"\n}"
+								},
+								{
+									"name": "User not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"userId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/user/delete",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"delete"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "63"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3f-i+moGIbqJsRrF4avfGGlXQvJGh0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:54:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"User not found !\"\n}"
+								}
+							]
+						},
+						{
+							"name": "addUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaG1lZGFiZGVsYXppejYwMThAZ21haWwuY29tIiwidXNlck5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzc2MjMxNiwiZXhwIjoxNzI3ODQ4NzE2fQ.SOFC8qA1FSueNrzTnZpzFMzfyUkaO8wFn2KiHe5kUwM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"ahmed\",\r\n    \"userName\": \"asdasd\",\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"password\": \"User@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/add",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"add"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"last one\",\r\n    \"userName\": \"asdasd\",\r\n    \"email\": \"ahme@gmail.com\",\r\n    \"password\": \"User@213\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/user/add",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"add"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "92"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"5c-RH5Z/kJijkiYi19aNPhszLIgEVM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:09:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "updateUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaG1lZGFiZGVsYXppejYwMThAZ21haWwuY29tIiwidXNlck5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzc2MjMxNiwiZXhwIjoxNzI3ODQ4NzE2fQ.SOFC8qA1FSueNrzTnZpzFMzfyUkaO8wFn2KiHe5kUwM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 8,\r\n    \"name\": \"ahmed\",\r\n    \"userName\": \"asdasd\",\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/update",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"last one\",\r\n    \"userName\": \"asdasd\",\r\n    \"email\": \"ahme@gmail.com\",\r\n    \"password\": \"User@213\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/user/update",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"update"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "92"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"5c-RH5Z/kJijkiYi19aNPhszLIgEVM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 09:09:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"success\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "getBooks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhaG1lQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzI3Nzg1MDc2LCJleHAiOjE3Mjc4NzE0NzZ9.ZewB20QxNu1CRs_nz5BDp-7O9UpK86Wd-U7poZJCyKw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"title\"\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/book/?page=1&limit=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"book",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"title\"\r\n}   ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/?page=1&limit=10",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "359"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"167-TwJ8lgvWJlO9U3b1n/8R7chlUjg\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 12:13:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 200,\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"title\": \"title\",\n            \"ISBN\": \"aaaaaaaaaaaaa\",\n            \"author\": \"author\",\n            \"quantity\": 1,\n            \"availableQuantity\": null,\n            \"shelfLocation\": \"a1\",\n            \"createdAt\": \"2024-10-01T11:24:13.588Z\",\n            \"updatedAt\": \"2024-10-01T11:24:13.588Z\",\n            \"deletedAt\": null\n        }\n    ],\n    \"pagination\": {\n        \"totalRecords\": 1,\n        \"totalPages\": 1,\n        \"currentPage\": 1,\n        \"pageSize\": 10\n    }\n}"
+								},
+								{
+									"name": "No books matches the filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"asdasddasda\"\r\n}   ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/?page=1&limit=10",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "84"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"54-RZ4XL2RvFCnKFEcyHCZKP1tRbKk\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 12:15:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No books with this filter was found !\"\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteBook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\": 3\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/book/delete",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\": 1\r\n}   ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/delete",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "71"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"47-VTftz6zLOpu6k6L/xy3E3lqH4Rw\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 11:00:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\"\n}"
+								},
+								{
+									"name": "Book not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\": 1\r\n}   ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/delete",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"delete"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "63"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3f-TlS4LJqUUrxCX1pjhNVA7undwu0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 11:02:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"Book not found !\"\n}"
+								}
+							]
+						},
+						{
+							"name": "addBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"title2\",\r\n    \"ISBN\": \"aaaaaaaaaaaac\",\r\n    \"author\": \"author\",\r\n    \"quantity\": 1,\r\n    \"shelfLocation\": \"a1\"\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/book/add",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"add"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"asdasd\",\r\n    \"ISBN\": \"aaaaaaaaaaaaa\",\r\n    \"author\": \"asdasd\",\r\n    \"quantity\": 123,\r\n    \"shelfLocation\": \"a12\"\r\n}   ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/add",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"add"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "80"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"50-4EwF7ksWhegKPKjN2CSh9cvSogw\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 10:51:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "updateBook",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\": 1,\r\n    \"title\": \"asdasdasdsadasdasdad\"\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/book/update",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"book",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\": 1,\r\n    \"title\": \"ahmed\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/update",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-sxctknX5EIviA04R2FcfpywLHq0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 10:54:56 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\"\n}"
+								},
+								{
+									"name": "Book not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookId\": 2,\r\n    \"title\": \"ahmed\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/book/update",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"update"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "63"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3f-TlS4LJqUUrxCX1pjhNVA7undwu0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 10:55:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"Book not found !\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "library",
+					"item": [
+						{
+							"name": "getTransactions",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ADMIN_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/library/transactions?page=1&limit=10&overdue=true",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"library",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "overdue",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/transactions?page=1&limit=10",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"transactions"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "406"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"196-hdF6+7aQoQhf56vqA6vGxLsFgXQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 16:52:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"transactions\": [\n            {\n                \"id\": 3,\n                \"user_id\": 10,\n                \"book_id\": 5,\n                \"borrowed_at\": \"2024-10-01T16:51:48.226Z\",\n                \"returned_at\": null,\n                \"due_date\": \"2024-10-08T16:51:48.226Z\",\n                \"deleted_at\": null,\n                \"createdAt\": \"2024-10-01T16:51:48.228Z\",\n                \"updatedAt\": \"2024-10-01T16:51:48.228Z\",\n                \"deletedAt\": null\n            }\n        ],\n        \"pagination\": {\n            \"totalTransactions\": 1,\n            \"totalPages\": 1,\n            \"currentPage\": 1,\n            \"pageSize\": 10\n        }\n    }\n}"
+								},
+								{
+									"name": "No transactions yet",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/transactions?page=1&limit=10",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"transactions"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 16:53:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No transactions yet!\"\n}"
+								},
+								{
+									"name": "overdue transactions",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/transactions?page=1&limit=10&overdue=true",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"transactions"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "overdue",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "673"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2a1-nCJYK7ElhOOeVb7iuRLm8+kquHY\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 01 Oct 2024 17:18:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"transactions\": [\n            {\n                \"id\": 5,\n                \"user_id\": 10,\n                \"book_id\": 4,\n                \"borrowed_at\": \"2024-10-01T16:58:42.507Z\",\n                \"returned_at\": \"2024-10-08T16:58:42.507Z\",\n                \"due_date\": \"2024-10-08T16:58:42.507Z\",\n                \"deleted_at\": null,\n                \"createdAt\": \"2024-10-01T16:58:42.507Z\",\n                \"updatedAt\": \"2024-10-01T16:58:42.507Z\",\n                \"deletedAt\": null\n            },\n            {\n                \"id\": 4,\n                \"user_id\": 10,\n                \"book_id\": 5,\n                \"borrowed_at\": \"2024-10-01T16:58:22.783Z\",\n                \"returned_at\": null,\n                \"due_date\": \"2024-10-10T16:58:22.783Z\",\n                \"deleted_at\": null,\n                \"createdAt\": \"2024-10-01T16:58:22.785Z\",\n                \"updatedAt\": \"2024-10-01T16:58:22.785Z\",\n                \"deletedAt\": null\n            }\n        ],\n        \"pagination\": {\n            \"totalTransactions\": 2,\n            \"totalPages\": 1,\n            \"currentPage\": 1,\n            \"pageSize\": 10\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "borrowTransactionsReport",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ADMIN_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"startDate\": \"09/01/2024\",\r\n    \"endDate\": \"09/20/2024\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/library/borrowTransactionsReport?page=1&limit=100",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"library",
+										"borrowTransactionsReport"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Error creating the CSV",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"startDate\": \"09/01/2024\",\r\n    \"endDate\": \"09/20/2024\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/borrowTransactionsReport?page=1&limit=100",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"borrowTransactionsReport"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "100"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:36:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Error creating the CSV report!\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"startDate\": \"09/01/2024\",\r\n    \"endDate\": \"09/20/2024\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/borrowTransactionsReport?page=1&limit=100",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"borrowTransactionsReport"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "100"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/csv; charset=utf-8"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment; filename=\"borrow-Transactions-Report.csv\""
+										},
+										{
+											"key": "Content-Length",
+											"value": "275"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"113-IcWhZB3GEiQ4XBPUwXtKNXTzKKY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:35:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "Transaction ID,User ID,Name,Username,Email,Book ID,Book Title,Book ISBN,Book Author,Shelf Location,Borrowed At,Returned At,Due Date\n10,10,ahmed,asdasd,ahmed@gmail.com,5,title2,aaaaaaaaaaaab,search,a1,2024-10-01T18:08:16.288Z,2024-10-10T18:08:16.288Z,2024-09-02T18:08:16.288Z\n"
+								},
+								{
+									"name": "No transactions was found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"startDate\": \"09/01/2024\",\r\n    \"endDate\": \"09/20/2024\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/borrowTransactionsReport?page=1&limit=100",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"borrowTransactionsReport"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "100"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:36:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No transactions yet!\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/overdueTransactionsReport",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"overdueTransactionsReport"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/csv; charset=utf-8"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment; filename=\"borrow-Transactions-Report.csv\""
+										},
+										{
+											"key": "Content-Length",
+											"value": "275"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"113-IcWhZB3GEiQ4XBPUwXtKNXTzKKY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:35:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "Transaction ID,User ID,Name,Username,Email,Book ID,Book Title,Book ISBN,Book Author,Shelf Location,Borrowed At,Returned At,Due Date\n10,10,ahmed,asdasd,ahmed@gmail.com,5,title2,aaaaaaaaaaaab,search,a1,2024-10-01T18:08:16.288Z,2024-10-10T18:08:16.288Z,2024-09-02T18:08:16.288Z\n"
+								},
+								{
+									"name": "Error creating the CSV",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/overdueTransactionsReport",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"overdueTransactionsReport"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:36:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Error creating the CSV report!\"\n}"
+								},
+								{
+									"name": "No transactions was found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/overdueTransactionsReport",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"overdueTransactionsReport"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:36:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No transactions yet!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "overdueTransactionsReport",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ADMIN_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/library/overdueTransactionsReport?page=1&limit=100",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"library",
+										"overdueTransactionsReport"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/overdueTransactionsReport",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"overdueTransactionsReport"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/csv; charset=utf-8"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment; filename=\"borrow-Transactions-Report.csv\""
+										},
+										{
+											"key": "Content-Length",
+											"value": "275"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"113-IcWhZB3GEiQ4XBPUwXtKNXTzKKY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:35:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "Transaction ID,User ID,Name,Username,Email,Book ID,Book Title,Book ISBN,Book Author,Shelf Location,Borrowed At,Returned At,Due Date\n10,10,ahmed,asdasd,ahmed@gmail.com,5,title2,aaaaaaaaaaaab,search,a1,2024-10-01T18:08:16.288Z,2024-10-10T18:08:16.288Z,2024-09-02T18:08:16.288Z\n"
+								},
+								{
+									"name": "Error creating the CSV",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/overdueTransactionsReport",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"overdueTransactionsReport"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:36:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Error creating the CSV report!\"\n}"
+								},
+								{
+									"name": "No transactions was found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/library/overdueTransactionsReport",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"library",
+												"overdueTransactionsReport"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-2u0r7aA5zMntMptRKo4ZWAU4aCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 02 Oct 2024 08:36:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"No transactions yet!\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "USER_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3Mjc4MDAyMDgsImV4cCI6MTcyNzg4NjYwOH0.6a-D7xT9djbRQBtVfv8EzCKF9J6AsJhtJYRHau96rzw",
+			"type": "string"
+		},
+		{
+			"key": "ADMIN_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaG1lZGFiZGVsYXppejYwMThAZ21haWwuY29tIiwidXNlck5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzc5NjIyNywiZXhwIjoxNzI3ODgyNjI3fQ.5BPPrs7a9HO1tiPA5IdaeHrRx_VFdiHEXqVq3U6Hxj8",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

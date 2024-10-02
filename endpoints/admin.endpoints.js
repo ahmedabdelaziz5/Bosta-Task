@@ -1,0 +1,7 @@
+const CHANGE_PASSWORD = 'admin: CHANGE_PASSWORD';
+const UPDATE_PROFILE = 'admin: UPDATE_PROFILE';
+
+module.exports = {
+    CHANGE_PASSWORD,
+    UPDATE_PROFILE
+};
