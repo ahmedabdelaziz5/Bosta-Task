@@ -68,4 +68,18 @@ module.exports = sequelize.define('Book', {
 }, {
   freezeTableName: true,
   tableName: 'books',
+  indexes: [
+    {
+      name: 'idx_books_title',
+      fields: ['title']
+    },
+    {
+      name: 'idx_books_ISBN',
+      fields: ['ISBN']
+    },
+    {
+      name: 'idx_books_author',
+      fields: ['author']
+    }
+  ]
 });

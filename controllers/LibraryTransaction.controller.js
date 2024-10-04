@@ -94,7 +94,17 @@ exports.getMyCurrentBooks = asyncHandler(async (req, res) => {
     const userId = req.user.id;
     const books = await libraryTransactionRepo.listTransactions(
         { user_id: userId },
-        { page, limit }
+        {
+            page,
+            limit,
+            include: [
+                {
+                    model: Book,
+                    as: 'book',
+                    attributes: ['id', 'title', 'ISBN', 'author', 'shelfLocation',],
+                }
+            ]
+        }
     );
     return res.status(200).json(books);
 });
@@ -117,7 +127,22 @@ exports.getTransactions = asyncHandler(async (req, res) => {
     const filter = overdue ? { [Op.or]: queryFilters } : {};
     const transactions = await libraryTransactionRepo.listTransactions(
         filter,
-        { page, limit }
+        {
+            page,
+            limit,
+            include: [
+                {
+                    model: User,
+                    as: 'user',
+                    attributes: ['id', 'name', 'userName', 'email'],
+                },
+                {
+                    model: Book,
+                    as: 'book',
+                    attributes: ['id', 'title', 'ISBN', 'author', 'shelfLocation',],
+                }
+            ]
+        }
     );
     return res.status(200).json(transactions);
 });

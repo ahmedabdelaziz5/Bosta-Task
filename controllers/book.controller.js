@@ -9,9 +9,9 @@ exports.getBooks = asyncHandler(async (req, res) => {
     let queryFilters = [];
     title ? queryFilters.push({ title: title }) : null;
     author ? queryFilters.push({ author: author }) : null;
-    ISBN ? searchQuery.push({ ISBN: ISBN }) : null;
+    ISBN ? queryFilters.push({ ISBN: ISBN }) : null;
     const books = await bookRepo.listBooks(
-        { [Op.or]: queryFilters },
+        { [Op.and]: queryFilters },
         { page, limit }
     );
     return res.status(books.statusCode).json(books);

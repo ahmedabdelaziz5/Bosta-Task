@@ -1,7 +1,7 @@
 ##  Library Management System :
  - This was my Technical Assessment for Backend Engineer position **@Bosta** company
  - you can access the task from here: [Assessment](https://drive.google.com/file/d/1i1-G4E77-ITegHgsJwp9eH8TrT-J3Jmr/view?usp=sharing). `All bonus requirements have been fulfilled!`.
- - Postman collection: [Postman collection](https://drive.google.com/file/d/1QysDVmqoU1M68JJ7qPutg4STuimczaN3/view?usp=sharing). <br><br>
+ - Postman collection: [Postman collection](https://drive.google.com/file/d/1KW0It53QBZxWlU4Q1unSBGJazyhoHJwZ/view?usp=sharing). <br><br>
 
 ## Objective: 
 - The objective of the Library Management System is to provide an efficient, user-friendly solution for managing library operations, including book cataloging, member registration, borrowing, returning, and tracking overdue books. This system aims to streamline administrative tasks, enhance the library experience for users, and ensure accurate inventory management and reporting capabilities. <br><br>
